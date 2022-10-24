@@ -10,6 +10,8 @@ What is working:
 
 What isn't working:
 - i havent set up any authentication method as per their suggestions
+  - [self hosted oidc server](https://github.com/vicalloy/oidc-server) is best bet for setting up auth
+    - outline uses passport, maybe integrating an [ldap strategy](https://www.passportjs.org/packages/passport-ldapauth/) may be worthwhile tho [this has been attempted](https://github.com/outline/outline/pull/939#issuecomment-487325520). we'd have to address support for this (i.e. testing against an LDAP instance)
 - redis + database are the only containers that stay up
   - minio loops and dies, their config needs work. guess i could use AWS instead but i want an encapsulated deploy
   - https-portal loops as well, havent looked into it
